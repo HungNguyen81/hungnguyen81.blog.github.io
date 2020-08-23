@@ -44,18 +44,15 @@
    .nav-bar {
       height: 375px;
    }
-
    .nav-bar ul {
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
    }
-
    .nav-bar ul li {
       display: block;
       padding: 5px;
    }
-
    .nav-bar ul li a {
       padding: 3px;
       font-size: 300%;
@@ -109,13 +106,28 @@
  @media screen and (max-width: 995px){
     #ava{
        width: 50%;
-       margin-left: 20%;
+       margin-left: 25%;
        margin-bottom: 10px;
     }
     #intro-p{
        width: 100%;
+       font-size: 250%;
+       text-align: center;
     }
     .intro h2{
-       font-size: 100%;
+       font-size: 300%;
     }
+   .list-info li span{
+      font-size: 200%;
+   }
+   .list-item{
+      font-size: 300%;
+      margin-right: 30px;
+   }
+   #p-content {
+      font-size: 200%;
+   }
+   .anh1{
+      font-size: 200%;
+   }
  }
