@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+   <meta charset="utf-8">
+   <title>Hois Blog</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/eb9cf78489.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+   <style>
+      /* Make the image fully responsive */
+      .carousel-inner img {
+         width: 100%;
+         height: 100%;
+      }
+   </style>
+
+</head>
+
+<body>
+   <header class="container-fluid">
+      <div id="imgs" class="carousel slide" data-ride="carousel">
+
+         <!-- Indicators -->
+         <ul class="carousel-indicators">
+            <li data-target="#imgs" data-slide-to="0" class="active"></li>
+            <li data-target="#imgs" data-slide-to="1"></li>
+            <li data-target="#imgs" data-slide-to="2"></li>
+            <li data-target="#imgs" data-slide-to="3"></li>
+            <!-- <li data-target="#imgs" data-slide-to="4"></li> -->
+         </ul>
+
+         <!-- The slideshow -->
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="img/anh_1.jpg" alt="image 1">
+               <div class="carousel-caption">
+                  <h3 class="">Experience</h3>
+                  <p class="anh1" style="font-weight:bold">Lần đầu trải nghiệm cầu Kinh tế</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="img/anh_2.jpg" alt="image 2">
+               <div class="carousel-caption">
+                  <h3>My pet</h3>
+                  <p class="anh1" style="font-weight:bold">Chú mèo con đáng yêu mà mình đã để lạc mất</p>
+               </div>
+               <style>
+                  .anh1 {
+                     color: #df2b2b;
+                  }
+               </style>
+            </div>
+            <!-- <div class="carousel-item">
+             <img src="img/anh_3.jpg" alt="image 3">
+           </div> -->
+            <div class="carousel-item">
+               <img src="img/anh_4.jpg" alt="image 4">
+               <div class="carousel-caption">
+                  <h3>Art</h3>
+                  <p class="anh1" style="font-weight:bold">Mình rất thích chụp ảnh, vẽ tranh ...</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="img/anh_5.jpg" alt="image 5">
+               <div class="carousel-caption">
+                  <h3>Experience</h3>
+                  <p class="anh1" style="font-weight:bold">Lần đầu đi Mùa hè xanh tình nguyện</p>
+               </div>
+            </div>
+         </div>
+
+         <!-- Left and right controls -->
+         <a class="carousel-control-prev" href="#imgs" data-slide="prev">
+            <span class="fas fa-angle-left" style="font-size:500%"></span>
+         </a>
+         <a class="carousel-control-next" href="#imgs" data-slide="next">
+            <span class="fas fa-angle-right" style="font-size: 500%"></span>
+         </a>
+      </div>
+      <!-- Responsive Navigation Bar -->
+      <div class="nav-bar">
+         <ul>
+            <li><a id="home" href="#">Home</a></li>
+            <li><a id="posts" href="./posts/post_index.html">Posts</a></li>
+            <li><a id="news" href="./news/news.html">News</a></li>
+            <li><a id="about" href="./about.html">About</a></li>
+         </ul>
+      </div>
+      <style>
+         .html {
+            overflow: hidden;
+         }
+
+         .nav-bar {
+            width: 100%;
+            height: 42px;
+            background-color: #2d9297;
+            position: relative;
+            float: right;
+         }
+
+         .nav-bar ul {
+            padding: 10px;
+            position: relative;
+            float: right;
+         }
+
+         .nav-bar ul li {
+            display: inline;
+            margin-left: -5px;
+         }
+
+         .nav-bar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            /* background-color: aqua; */
+            transition: all .5s;
+         }
+
+         .nav-bar ul li a:hover {
+            background-color: cadetblue;
+            /* font-weight: bold; */
+            border-bottom: 3px solid #0ba1e7;
+         }
+
+         @media screen and (max-width: 315px) {
+            .nav-bar {
+               height: 150px;
+            }
+
+            .nav-bar ul {
+               position: absolute;
+               left: 50%;
+               transform: translate(-50%, 0);
+            }
+
+            .nav-bar ul li {
+               display: block;
+               padding: 5px;
+            }
+
+            .nav-bar ul li a {
+               padding: 3px;
+            }
+         }
+      </style>
+   </header>
+   <div class="container content-section">
+      <div class="row">
+         <div class="col-md-3">
+            <div class="container" style="border: 1px solid gray; border-radius: 20px;">
+               <div class="intro">
+                  <h2>Introduce</h2>
+               </div>
+               <div class="intro-content">
+                  <img id="ava"
+                     src="https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/76693386_1013945698955305_4592078049612136448_o.jpg?_nc_cat=106&_nc_sid=174925&_nc_ohc=NlrRR85gi_EAX8TK7af&_nc_ht=scontent-hkt1-1.xx&oh=af251a49f7f7ed6850a6031971abb084&oe=5F65F34A"
+                     alt="avt">
+                  <p id="intro-p">I'm a student at <i>Hanoi University of Science and Technology</i></p>
+                  <div class="clearfix"></div>
+                  <ul class="list-info">
+                     <li> <i class="fas fa-check list-item"></i><span><strong>Name:</strong> Nguyễn Ngọc Hưng</span>
+                     </li>
+                     <li> <i class="fas fa-check list-item"></i><span><strong>Date of Birth:</strong> Jan, 8th</span>
+                     </li>
+                     <li> <i class="fas fa-check list-item"></i><span><strong>Favorite:</strong> Music, Painting,
+                           Coding, ...</span> </li>
+                  </ul>
+               </div>
+               <style>
+                  .content-section {
+                     padding-top: 100px;
+                     /* background: red */
+                  }
+
+                  .intro {
+                     text-align: center;
+                     background-color: thistle;
+                     padding: 10px;
+                     margin-bottom: 10px;
+                     margin-top: 10px;
+                     border-radius: 20px;
+                  }
+
+                  #ava {
+                     width: 40%;
+                     position: relative;
+                     float: left;
+                     /* margin-left: -8px; */
+                     margin-right: 8px;
+                     border-radius: 50%;
+                     border: 2px solid white;
+                  }
+
+                  #intro-p {
+                     width: 60%;
+                     position: relative;
+                     float: left;
+                     margin-right: -8px;
+                     font-family: 'Lato', sans-serif;
+                     font-weight: 400;
+                  }
+
+                  .clearfix {
+                     content: " ";
+                     display: table;
+                     clear: both;
+                  }
+
+                  .list-info {
+                     list-style: none;
+                     margin-left: -30px;
+                  }
+
+                  .list-info li span {
+                     font-size: 90%;
+                  }
+
+                  .list-item {
+                     font-size: 110%;
+                     margin-right: 10px;
+                  }
+
+                  @media screen and (max-width: 995px) {
+                     #ava {
+                        width: 50%;
+                        margin-left: 20%;
+                        margin-bottom: 10px;
+                     }
+
+                     #intro-p {
+                        width: 100%;
+                     }
+
+                     .intro h2 {
+                        font-size: 100%;
+                     }
+                  }
+               </style>
+            </div>
+         </div>
+         <div class="col-md-9">
+            <div class="content">
+               <style>
+                  #home{
+                     background-color: teal;
+                  }
+               </style>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis modi, laboriosam obcaecati beatae
+                  dolorum corporis eum aut harum cum? Voluptatibus nam omnis quod consequuntur obcaecati voluptate ipsa
+                  aut explicabo libero aperiam? Exercitationem neque architecto suscipit quibusdam iste quisquam labore
+                  optio perferendis asperiores eligendi temporibus sed cum, repellat, quas voluptatem ducimus aperiam
+                  ullam officia tempore. Ipsum officia modi repellat, odit vero quos? Quas, corporis officia. Sequi sunt
+                  illum possimus iusto. Doloribus quod distinctio nemo ipsum, quidem autem ducimus eligendi atque.
+                  Voluptas voluptates animi doloremque pariatur quae maxime illo autem asperiores atque fugit aliquid
+                  nihil, nostrum sapiente ipsam saepe ipsa vitae blanditiis earum harum corporis! Provident molestiae
+                  culpa nesciunt fuga recusandae, error maiores voluptatum aspernatur velit. Quia laudantium pariatur
+                  maiores facere, molestias nisi corporis voluptate sequi aperiam harum quas neque aspernatur magni
+                  ratione distinctio quo laborum molestiae nesciunt reiciendis! Quidem praesentium in illum minima! Eum
+                  a corrupti ratione earum officiis libero debitis quo deserunt assumenda autem est eveniet iste
+                  exercitationem sunt sapiente, ipsa labore doloremque aliquid quaerat impedit pariatur numquam
+                  temporibus. Libero maiores beatae cum obcaecati et aperiam consequuntur, quia sunt excepturi quae rem
+                  architecto sed reiciendis, earum tempora ratione quis id ipsam commodi. Minima, officia laudantium!
+                  Facilis autem praesentium modi nobis iusto suscipit quasi amet ad at dolor fugit, minus delectus
+                  voluptatem laborum, minima esse debitis, sint labore incidunt. Quaerat quia, ullam dolores laudantium
+                  veniam placeat officiis iste error quibusdam excepturi possimus aspernatur corrupti molestiae
+                  perferendis debitis soluta ad nobis tenetur eligendi sapiente assumenda nulla dolor? Doloremque
+                  maiores omnis voluptatibus ipsum nisi debitis et minima illum, sequi impedit quibusdam ut saepe
+                  quisquam quis similique quaerat molestias libero corporis doloribus. At eos, dolor omnis atque cumque
+                  tempora consequatur non commodi quas culpa necessitatibus quaerat minus quia alias iure quod eveniet
+                  unde nostrum itaque ipsa. Voluptatum odit quaerat consequuntur nobis iusto. Rerum debitis consequuntur
+                  nam quaerat perferendis molestias voluptatibus suscipit dignissimos corrupti impedit commodi rem,
+                  labore adipisci iusto officia. Odio, nisi! Excepturi corrupti, mollitia cumque quisquam ipsam cum
+                  corporis autem aliquam assumenda architecto voluptatum quo et. Voluptates molestiae vitae atque
+                  impedit est laudantium hic reprehenderit mollitia harum magni dignissimos officia quisquam odio neque
+                  quam, sit incidunt culpa enim? Quaerat corrupti dolore numquam modi ipsa. Voluptatum pariatur a
+                  temporibus cupiditate soluta eius molestiae tenetur itaque aut inventore minus maxime cum facilis
+                  sequi, illum id voluptas excepturi explicabo fugit quaerat laborum labore. Atque vitae vel maxime,
+                  quibusdam reprehenderit aperiam maiores quos iusto dolorum illo ipsam doloribus, nemo obcaecati
+                  molestias alias? Magni eveniet, porro unde quis animi molestiae doloremque nostrum corrupti odit quasi
+                  optio inventore, dolores aperiam ut explicabo voluptate placeat obcaecati dolor commodi dignissimos
+                  illum! Quaerat, numquam labore quidem blanditiis totam deleniti debitis ullam officiis doloribus cum
+                  consequatur ex ipsam officia fugiat possimus dolores aut quod explicabo maxime! Provident quibusdam
+                  voluptatibus ipsam est molestiae neque voluptatum facilis praesentium quo tempora? Vero fugiat totam
+                  veniam quis, modi facilis suscipit consectetur deserunt ipsam explicabo deleniti vitae animi iure
+                  aspernatur soluta, itaque distinctio neque nemo exercitationem quia est! Nemo cum maxime, nisi
+                  voluptatum atque recusandae veritatis praesentium libero eum? Repellat beatae, ad iure blanditiis
+                  eveniet illum, iusto illo corporis, veritatis ut minus nihil voluptas porro debitis. Sapiente, libero
+                  nisi? Culpa ipsum dolore amet beatae debitis accusamus exercitationem, sint numquam et explicabo est
+                  aliquid. Eum praesentium officiis aliquam optio ipsa omnis quod minima, labore sit in. Recusandae,
+                  officia. Magnam in explicabo distinctio consequuntur id fuga, voluptate numquam aspernatur recusandae
+                  maiores aut ex quia. Adipisci vel officia praesentium amet neque recusandae distinctio soluta
+                  perferendis debitis animi repellendus, nisi enim. Reiciendis sed dolorum ipsam deserunt iure tempora
+                  nesciunt assumenda numquam animi perspiciatis. Totam doloremque aperiam commodi harum assumenda vero
+                  fugiat culpa officiis aliquam quam! Corporis eius repellat in natus ea consectetur quia tenetur,
+                  deleniti quidem facere, at harum molestias nam temporibus deserunt illo. Provident, molestiae pariatur
+                  voluptates quis tempore corrupti hic animi soluta! Cum provident, quibusdam dolor magni, nobis eum
+                  enim incidunt quisquam est nam sequi hic commodi, minus sit. Tempora sint iste labore ducimus vitae,
+                  numquam quisquam iusto minima dolores suscipit nostrum porro reprehenderit, consequuntur, assumenda
+                  voluptatum distinctio perferendis nulla fuga. Porro voluptas fugiat in obcaecati atque labore
+                  molestias assumenda ipsa, magnam quae dolorem, consectetur facere possimus non distinctio consequuntur
+                  autem ipsum sunt perspiciatis aliquam quos, nihil aperiam unde! Porro mollitia voluptatem sit odit
+                  aliquam illo architecto? Ex veritatis, voluptatum doloribus obcaecati repellat, sit est expedita
+                  pariatur voluptate aliquid odio? Quia earum aperiam voluptate, officia omnis laudantium nostrum,
+                  aliquam deleniti necessitatibus, illum impedit fuga beatae maxime tempore numquam incidunt quas
+                  dignissimos ea officiis quod ipsa pariatur suscipit sed voluptatibus! Ipsum rerum libero, sint animi
+                  et atque soluta iure, laudantium inventore ipsam omnis ipsa asperiores. Velit nostrum, consectetur
+                  similique doloremque suscipit soluta culpa aliquid reprehenderit! Molestiae ad debitis, cumque ratione
+                  iusto doloremque fuga rem placeat, reiciendis est culpa error, impedit aliquid quas. Voluptatem,
+                  blanditiis quidem exercitationem aliquam omnis iusto ducimus qui, atque enim cupiditate magnam eaque?
+                  Quae cupiditate magnam rerum velit quis, veniam fugit aspernatur sed incidunt cumque neque possimus
+                  similique, repellendus ullam suscipit omnis ducimus ut corrupti commodi autem odit! Praesentium ullam
+                  modi at voluptates ipsa exercitationem est sunt maxime, quia quis dolorem ipsum earum beatae nesciunt
+                  voluptatibus aliquid quod nam sint in alias minus. Illum, consequuntur ipsam? Nisi cumque hic quidem
+                  officiis amet! Nostrum ex qui non, debitis aut ad aspernatur, earum consectetur dolorum totam, animi
+                  nemo recusandae. Quod expedita, necessitatibus mollitia et officia cumque autem vitae cum nemo sit eum
+                  aspernatur rerum recusandae quas hic inventore non quo nesciunt impedit dolorem cupiditate. Quam
+                  molestiae ipsam omnis, placeat quis doloribus possimus delectus tempore deserunt soluta eos cupiditate
+                  mollitia eligendi cum amet nisi! Doloremque blanditiis nesciunt voluptatibus nulla consequuntur
+                  corrupti, omnis fugiat, repellendus at, excepturi officia veritatis. Quasi nam, dolore asperiores
+                  magnam cupiditate possimus molestias officiis ipsa porro, doloribus totam veniam perspiciatis
+                  necessitatibus tenetur alias quidem quo illo. Consequuntur, in corporis dicta repellendus sed aliquid
+                  rerum a tempora ad pariatur vero blanditiis fuga laborum facilis? Iure molestiae consectetur aut
+                  aliquam corporis reprehenderit, quae modi necessitatibus repellat laborum doloribus quisquam!
+                  Doloribus consectetur quia deserunt ut ipsum, eos rerum nulla blanditiis sit!</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br>
+   <hr>
+   <footer>
+      <div class="container-fluid" style="background-color:steelblue;">
+         <div class="row">
+            <div class="col-md-6" style="text-align:right">
+               <br>
+               <h6>Contact</h6>
+               <p>Email: nguyenngochung.ncth@gmail.com</p>
+               <p>Phone: 0334.004.653</p>
+               <p>Study at: Hanoi University of Science and Technology</p>
+            </div>
+            <div class="col-md-6">
+               <br>
+               <h6>Contact</h6>
+               <p>Email: nguyenngochung.ncth@gmail.com</p>
+               <p>Phone: 0334.004.653</p>
+               <p>Study at: Hanoi University of Science and Technology</p>
+            </div>
+         </div>
+         <div>
+            <hr>
+            <p style="text-align: center;"><i class="fas fa-copyright"></i><i>2020 Hois Blog. All rights reserved.</i>
+            </p>
+            <br>
+         </div>
+      </div>
+   </footer>
+</body>
+
+</html>
